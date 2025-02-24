@@ -27,8 +27,9 @@ static PyObject *
 uflip(PyObject *self, PyObject *args)
 {
   PyObject *so;
+  Py_ssize_t len;
   char *p;
-  int len, ret;
+  int ret;
 
   if (!PyArg_ParseTuple(args, "S", &so))
     return NULL;
@@ -49,8 +50,9 @@ static PyObject *
 byteswap(PyObject *self, PyObject *args)
 {
   PyObject *so;
+  Py_ssize_t len;
   char *p;
-  int len, ret;
+  int ret;
 
   if (!PyArg_ParseTuple(args, "S", &so))
     return NULL;
